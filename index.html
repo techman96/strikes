@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Display a popup on click</title>
+    <meta property="og:description" content="When a user clicks a symbol, show a popup containing more information." />
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://unpkg.com/maplibre-gl@4.3.2/dist/maplibre-gl.css' />
+    <link rel="stylesheet" href="drones.css">
+    <script src='https://unpkg.com/maplibre-gl@4.3.2/dist/maplibre-gl.js'></script>
+    <link href="https://unpkg.com/@watergis/maplibre-gl-legend/dist/maplibre-gl-legend.css" rel="stylesheet" /> <script src="https://unpkg.com/@watergis/maplibre-gl-legend/dist/maplibre-gl-legend.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body, p, a, i { margin: 0; padding: 0;  }
+        html, body, #map { height: 100%; }
+        .set{font-size: xx-small;
+        color: gray;}
+    </style>
+</head>
+<body>
+
+    <div id="map" style="height: 90vh;"></div>
+
+    <div class="lego">
+        <p style=" max-width: 140px; padding-top: 5px;">Civilians Killed: 5</p>
+        <div id="range">
+        </div>
+        <span>
+            <p style="padding-top: 5px;">200</p>
+        </span>
+        <span style="padding: 5px; color: black;">|</span>
+        <span style="padding-top: 5px;">U.S. has launched 430 drone strikes in Pakistan from 2004 to 2018. 
+        </span>
+    </div>
+
+    <header class="header">
+        Drone Strikes In Pakistan
+    </header>
+
+    <div class="content">
+        <p>
+            The US has been conducting drone strikes on a large scale in Pakistan since June 2004. Pakistan has been hit with the second highest number of drone strikes in the world, behind Afghanistan.
+        </p>
+        <br>
+        <p>
+            The strikes were initially launched from the airbases inside Pakistan. But after the Salala incident in 2011 by NATO forces, which killed 28 soldiers, US-Pakistan relations turned bitter. The rest of the strikes were carried out across the border from Afghanistan.
+        </p>
+        <br
+        <p>
+            In the first few years of the war, strikes were not very frequent. But since 2008, they increased in frequency towards the end of George Bush's last year. The President Barack Obama tenure saw a dramatic rise in strike frequency. Obama ordered more strikes in his first year of presidency than Bush did during his entire two terms of presidency.
+        </p> 
+    </div> 
+    
+    <div id="container1">
+        <!-- <div style="max-width: 100%; text-align: center;">
+            <button style="font-size: 20px;" id="switch_data">Change to civilians killed
+            </button>
+        </div> -->
+        <div id="container">
+            <p id="head_text">Drone Stirkes In Pakistan</p>
+            <p id="legend_text">
+                Obama's tenure includes the most strikes for any president. 
+            </p>
+            <div id="presi_legend"></div>
+        </div>
+        <div class="content">
+            Most the strikes in Pakistan were carried out with ISI approval, but the Pakistan Army kept it a secret for a while by claiming to have conducted the strikes themselves. According to ‘a senior CIA official who served in the region,’ the official told the <a href="https://www.newyorker.com/magazine/2014/11/24/unblinking-stare">New Yorker</a>: ‘I would show them the Predator footage and I would say, “This is what is happening—massive training camps.” A Pakistani military spokesman said this after the very first drone strike in June, hiding US involvement:
+            <blockquote >
+                Nek Mohammad was suspected to be present in a hideout with his associates and our security forces acted swiftly on the information and that is how he was killed.
+            </blockquote>
+            Steve Coll exposed the secret arrangment between Pakistan and CIA in his article. He wrote:
+            <blockquote>
+                In 2004 the [Pakistan] Army intensified its operations [in South Waziristan], and, as violence spread, Musharraf allowed the CIA to fly drones to support Pakistani military action. In exchange, Musharraf told me, the Bush Administration “supplied us helicopters with precision weapons and night-operating capability.” He added: “The problem was intelligence collection and targeting… The Americans brought the drones to bear.”
+            </blockquote>
+        </div>
+        <div id="container2">
+            <p id="head_text">Civilians Killed By Drones Strikes</p>
+            <p id="legend_text">
+                Men of military age are not included in the civilian casualities as they were considered a target.
+            </p>
+            <div id="presi_legend"></div>
+        </div>
+    </div>
+
+    <div class="content" style="margin-top: 0px;">
+        <p>
+            Civilians deaths in Pakistan over the 14 year period are reported to be more than 600 which some estimates said is underreported.    
+        </p>
+        <br>
+        <p>
+            In 2008, then Director of C.I.A, Michael Hayden revised the targetting and strike quidlines for drones operartions. These changed were termed as "signature strikes." These new changes allowed the remote drone operators to fire missile at armed military-aged men engaged in or facilitating suspecious activity even if there identities were unknown. The first year of Obama proved to be the most deatliest for civilians because of these changed in the internal documents. 
+        </p>
+        <br>
+        <p>
+            Signature strikes are “not a concept known to international humanitarian law,” according to Christof Heyns, the U.N. special rapporteur on extrajudicial, summary, or arbitrary executions. 
+        </p>
+        <br>
+        <p>
+            He further said if signature strikes involves "targeting without sufficient information to make the necessary determination, it is clearly unlawful."
+        </p>
+    </div> 
+
+<script src="drones copy.js"></script>
+</body>
+</html>
